@@ -14,12 +14,17 @@
     </tr>
  <?php foreach ($films as $film): ?>
     <tr>
+        <img src="" alt="">
         <td><?php echo htmlspecialchars($film['film_id']); ?></td>
-        <td><?php echo htmlspecialchars($film['film_name']); ?></td>
+        <td>
+        <?php echo htmlspecialchars($film['film_name']); ?>        </td>
         <td><?php echo htmlspecialchars($film['description']); ?></td>
         <td>
+    </td>
+    <td>
         <img src="images/<?php echo htmlspecialchars($film['image']); ?>" class="img-poster">
         </td>
+
         <td><?php echo htmlspecialchars($film['release_year']); ?></td>
         <td><?php echo htmlspecialchars($film['language']); ?></td>
         <td>  <?php
