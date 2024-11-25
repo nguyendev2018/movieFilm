@@ -1,1 +1,6 @@
 body{font-size: 1.15rem;}
+.img-poster{
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+}

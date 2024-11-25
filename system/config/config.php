@@ -34,8 +34,8 @@ return [
         "system_debug_console" => true,
         "system_execution_time" => microtime(true),
         "system_cache_version" => 0001, // Refresh frontend cache
-        "system_allow_forms_without_csrf" => false,
-
+        "system_allow_forms_without_csrf" => true,
+        "allow_forms_without_csrf_input" => true,
         "template_header" => "src/common/view/Header.php",
         "template_footer" => "src/common/view/Footer.php",
 
@@ -67,7 +67,8 @@ return [
         "system_debug_console" => true,
         "system_execution_time" => microtime(true),
         "system_cache_version" => 0001, // Refresh frontend cache
-        "system_allow_forms_without_csrf" => false,
+        "system_allow_forms_without_csrf" => true,
+        "allow_forms_without_csrf_input" => true,
 
         "template_header" => "src/common/view/Header.php",
         "template_footer" => "src/common/view/Footer.php",

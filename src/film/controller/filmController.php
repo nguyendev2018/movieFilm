@@ -22,17 +22,19 @@
 
      // Nếu phương thức hiện tại là POST => thực hiện thêm dữ liệu
      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-     $name = $_POST['name'];
-     $desc = $_POST['desc'];
+     $film_name = $_POST['film_name'];
+     $description = $_POST['description'];
      $image = $_POST['image'];
-     $lang = $_POST['lang'];
+     $release_year = $_POST['release_year'];
+     $language = $_POST['language'];
      // Thêm dữ liệu film mới bằng function create() đã tạo trong Model
 
      $film_model->create(
-     $name,
-     $desc,
+     $film_name,
+     $description,
      $image,
-     $lang,
+     $release_year,
+     $language,
      );
      // Redirect về lại trang chủ
      header("Location: /");

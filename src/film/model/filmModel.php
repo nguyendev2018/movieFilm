@@ -7,12 +7,29 @@ class FilmModel extends Base
 {
     public function getAllFilms(): array
     {
-        return $this->database->query("SELECT * FROM `films`");
+        // Truy vấn JOIN để lấy country_name từ bảng countries
+        $query = "
+            SELECT
+                films.film_id,
+                films.film_name,
+                films.description,
+                films.image,
+                films.release_year,
+                films.language,
+                films.created_at,
+                countries.country_name,
+                category.category_name
+            FROM
+                films
+            LEFT JOIN countries ON films.country_id = countries.country_id
+            LEFT JOIN category ON films.category_id = category.category_id        ";
+
+        return $this->database->query($query);
     }
-    public function create(string $name, string $desc, string $image, string  $lang, string $create_at) {
-        $query = "INSERT INTO `films`(`name`, `desc`, `image`,
-`lang`, `create_at`) VALUES('$name', '$desc', '$image',
-'$lang','" . date("Y-m-d", strtotime($create_at)) . "')";
+
+    public function create(string $film_name, string $description, string $image, int $release_year, string $language) {
+        $query = "INSERT INTO `films`(`film_name`, `description`, `image`, `release_year`, `language`)
+                  VALUES('$film_name', '$description', '$image', '$release_year','$language')";
         return $this->database->query($query);
     }
 }

@@ -7,21 +7,27 @@
         <th>Hình Ảnh</th>
         <th>Ngày Phát Hành</th>
         <th>Ngôn ngữ</th>
-        <th>created_at</th>
-        <th>country_id</th>
-        <th>category_id</th>
+        <th>Thời gian cụ thể tạo</th>
+        <th>Quốc Gia</th>
+        <th>Danh mục</th>
+        <th>Hành động</th>
     </tr>
  <?php foreach ($films as $film): ?>
     <tr>
         <td><?php echo htmlspecialchars($film['film_id']); ?></td>
         <td><?php echo htmlspecialchars($film['film_name']); ?></td>
         <td><?php echo htmlspecialchars($film['description']); ?></td>
-        <td><?php echo htmlspecialchars($film['image']); ?></td>
+        <td>
+        <img src="images/<?php echo htmlspecialchars($film['image']); ?>" class="img-poster">
+        </td>
         <td><?php echo htmlspecialchars($film['release_year']); ?></td>
         <td><?php echo htmlspecialchars($film['language']); ?></td>
-        <td><?php echo htmlspecialchars($film['created_at']); ?></td>
-        <td><?php echo htmlspecialchars($film['country_id']); ?></td>
-        <td><?php echo htmlspecialchars($film['category_id']); ?></td>
+        <td>  <?php
+    $date = new DateTime($film['created_at']);
+    echo $date->format('d/m/Y H:i:s');
+    ?></td>
+        <td><?php echo htmlspecialchars($film['country_name']); ?></td>
+        <td><?php echo htmlspecialchars($film['category_name']); ?></td>
         <td>
             <!-- Nút Thêm-->
             <a href="/create">Thêm</a> |
