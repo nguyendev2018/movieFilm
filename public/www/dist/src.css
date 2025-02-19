@@ -1,6 +1,73 @@
-body{font-size: 1.15rem;}
-.img-poster{
+body {
+  font-size: 1.15rem;
+}
+a:hover{
+  text-decoration: none !important;
+  color: #0056b3;
+}
+.img-poster {
   width: 100px;
   height: 150px;
   object-fit: cover;
 }
+
+select {
+  display: block;
+}
+.card-img, .card-img-bottom, .card-img-top{
+  height: 250px;
+  object-fit: cover;
+}
+
+.wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal.show .modal-dialog{
+  max-width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  transform: translate(-50%, -50%) !important;
+  top: 50%;
+  left: 50%;
+}
+
+@media screen and (min-width:768px) {
+  #videoPlayer{
+    height: 600px;
+  }
+}
+.wrapper-auth {
+  max-width: 400px;
+  margin: 50px auto; /* Căn giữa form theo chiều ngang và tạo khoảng cách từ trên xuống */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center; /* Căn giữa chữ "Đăng nhập/Đăng ký" theo chiều ngang */
+}
+.wrapper-auth>form {
+  display: block;
+}
+
+.wrapper-auth button {
+  width: 100%;
+  margin-top: 20px; /* Tăng khoảng cách phía trên nút */
+
+  padding: 10px;
+  background-color:  #b58ffb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper-auth a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
