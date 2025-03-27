@@ -14,6 +14,7 @@ class FilmController extends Base
     {
         $film_model = new FilmModel();
         $data       = [];
+<<<<<<< HEAD
 
         $limit  = 10; //So san pham tren moi trang
         $page   = isset($_GET['page']) ? (int) $_GET['page'] : 1;
@@ -94,6 +95,118 @@ class FilmController extends Base
                 // Sửa dữ liệu nhân viên mới bằng function
                 // updateEmployeeById() đã tạo trong Model
 
+=======
+
+        $limit  = 10; //So san pham tren moi trang
+        $page   = isset($GET['page']) ? (int) $_GET['page'] : 1;
+        $offset = ($page - 1) * $limit;
+
+        $data["films"] = $film_model->getAllFilms($limit, $offset);
+        //Tim tong so nhan vien
+        $totalFilms = $film_model->countAllFilms();
+        //Tinh so trang
+        $totalPages = ceil($totalFilms / $limit);
+        // $data['totalPages'] = ceil($totalFilms / $limit);
+        //Gan so trang vao mang $data["totalPages"]
+        $data["totalPages"] = $totalPages;
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $film_id = $_POST['film_id'];
+            //da cap nhat
+            try {
+                $film_model->deleteFilmById($film_id);
+                $_SESSION['message'] = "Xóa thành công.";
+            } catch (\Exception $e) {
+                $_SESSION['error'] = "Đã xảy ra lỗi: " . $e->getMessage();
+            }
+            // Redirect về này trang chủ
+            header("Location: /film");
+            exit;
+        }
+        // $this->output->load("film/listFilm", $data);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $keyword = $_GET['keyword'];
+            if ($keyword) {
+                $result = $film_model->filterFilm($keyword, $film_id);
+
+                $data["films"] = empty($result) ? [] : (isset($result[0]) ? $result : [$result]);
+
+            } else {
+                // Nếu $keyword rỗng, trả lại danh sách nhân viên
+                $data["films"] = $film_model->getAllFilms($limit, $offset);
+
+            }
+        }
+
+        // Nếu phương thức hiện tại là GET => thực hiện lọc dữ liệu nhân viên
+        // if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+        //     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
+        //     if (!empty($keyword)) {
+        //         $result = $film_model->filterFilm($keyword);
+        //         $data["films"] = empty($result) ? array() :
+        // (isset($result[0]) ? $result : array($result));
+
+        //     } else {
+        //         $films = $film_model->getAllFilms($limit, $offset);
+        //         $data["films"] = empty($films) ? array() :
+        // (isset($films[0]) ? $films : array($films));
+        //             }
+        //         }
+
+        /**
+         * Thêm tệp JavaScript “Notify.js” vào.
+         */
+        $this->output->addJs("js/Notify");
+        $this->output->load("film/listFilm", $data);
+
+    }
+    public function createOrUpdateFilm(): void
+    {
+        $data       = [];
+        $film_model = new FilmModel();
+        // Nếu phương thức hiện tại là POST => thực hiện thêm hoặc sửa dữ liệu
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $film_id      = $_GET["film_id"];
+            $film_name    = $_POST["film_name"];
+            $description  = $_POST["description"];
+            $release_year = (int) $_POST["release_year"];
+            $language     = $_POST["language"];
+            $category_id  = $_POST['categories']; // Lấy giá trị từ input của form
+            $country_id   = $_POST['country'];    // Lấy giá trị từ input của form
+            $genre_id     = $_POST['genres'];
+            $image        = '';
+            // Xử lý tệp image
+            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                $upload_dir = "public/images/"; // Thư mục lưu trữ
+                                                // Tạo tên file duy nhất bằng cách thêm timestamp
+                $image_name  = time() . '_' . basename($_FILES['image']['name']);
+                $target_file = $upload_dir . $image_name;
+
+                // Di chuyển tệp được upload vào thư mục lưu trữ
+                if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
+                    // Xóa hình ảnh cũ nếu tồn tại
+                    if ($old_image && file_exists($upload_dir . $old_image)) {
+                        unlink($upload_dir . $old_image);
+                    }
+                    // Lưu tên file mới vào database
+                    $image = $image_name;
+                } else {
+                                         // Nếu không upload được
+                    $image = $old_image; // Giữ nguyên hình cũ
+                    echo "Failed to upload image.";
+                }
+            } else {
+                // Nếu không có file mới, giữ nguyên hình cũ
+                $image = $old_image;
+            }
+
+            // Kiểm tra xem có truyền id không?
+            if ($film_id) {
+                // Sửa dữ liệu nhân viên mới bằng function
+                // updateEmployeeById() đã tạo trong Model
+
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
                 try { // ⇐ bắt đầu Try-Catch
                     $film_model->updateFilmById(
                         $film_id,
@@ -105,7 +218,11 @@ class FilmController extends Base
                         $country_id,
                         $genre_id,
                         $image
+<<<<<<< HEAD
 
+=======
+                      
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
                     );
                     $_SESSION['message'] = "Cập nhật thành công.";
                 } catch (\Exception $e) {
@@ -123,9 +240,15 @@ class FilmController extends Base
                         $language,
                         $category_id,
                         $country_id,
+<<<<<<< HEAD
                         $genre_id,
                         $image
 
+=======
+                        $genre_id.
+                        $image
+                      
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
                     );
                     $_SESSION['message'] = "Thêm thành công.";
                 } catch (\Exception $e) {
@@ -152,7 +275,11 @@ class FilmController extends Base
             // Lấy danh mục và quốc gia từ model
             $data["categories"] = $film_model->getAllCategories();
             $data["countries"]  = $film_model->getAllCountry();
+<<<<<<< HEAD
             $data['genres']     = $film_model->getAllGenres();
+=======
+            $data["genres"]     = $film_model->getAllGenres();
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
         }
         // Load trang thêm hoặc sửa nhân viên
@@ -161,15 +288,25 @@ class FilmController extends Base
     public function home(): void
     {
         $film_model    = new FilmModel();
+<<<<<<< HEAD
     $data["films"] = $film_model->getAllFilmsFull();
 
         if (! isset($_SESSION["genres"])) {
             $_SESSION["genres"] = $film_model->getAllGenresName();
+=======
+        $data["films"] = $film_model->getAllFilmsFull();
+
+        if (! isset($_SESSION["genres"])) {
+            $_SESSION["genres"] = $film_model->getAllGenersName();
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
         }
         if (! isset($_SESSION["country"])) {
             $_SESSION["country"] = $film_model->getAllCountryName();
         }
+<<<<<<< HEAD
         $data["banners"] = $film_model->getAllBannerImage();
+=======
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
         $this->output->load("film/listFilmFE", $data);
 
     }
@@ -187,9 +324,13 @@ class FilmController extends Base
 
         // Lấy thông tin phim
         $film = $film_model->findFilmById($film_id);
+<<<<<<< HEAD
          $filmCountry =  $film_model->findCountryByFilmId($film_id);
          $filmCategory =  $film_model->findCategoryByFilmId($film_id);
          $filmGenre =  $film_model->findGenreByFilmId($film_id);
+=======
+
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
         // Kiểm tra nếu phim không tồn tại
         if (! $film) {
             die("Phim không tồn tại hoặc không tìm thấy!");
@@ -203,9 +344,12 @@ class FilmController extends Base
         $data = [
             "film"     => $film,
             "episodes" => $episodes,
+<<<<<<< HEAD
             "filmCountry" => $filmCountry,
             "filmCategory" => $filmCategory,
             "filmGenre" => $filmGenre,
+=======
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
         ];
 
         $this->output->load("film/detailFilmFE", $data);
@@ -219,6 +363,7 @@ class FilmController extends Base
             die("Không có genre_id hợp lệ!");
         }
 
+<<<<<<< HEAD
         // Lấy danh sách phim và tên thể loại
         $films = $film_model->findFilmByGenreId($genre_id);
         // Nếu không tìm thấy thể loại, đặt tên mặc định
@@ -250,6 +395,43 @@ class FilmController extends Base
         $this->output->load("film/filmCountry", $data);
     }
 
+=======
+        $films = $film_model->findFilmByGenerId($genre_id);
+
+        if (empty($films)) {
+            die("Không tìm thấy phim nào cho quốc gia này!");
+        }
+
+        $data["films"] = $films; // Trả về danh sách phim
+        $this->output->load("film/filmGeners", $data);
+    }
+    public function filmCountry()
+    {
+        $film_model = new FilmModel();
+        $country_id = isset($_GET["country_id"]) ? (int) $_GET["country_id"] : null;
+
+        if ($country_id === null) {
+            die("Không có country_id hợp lệ!");
+        }
+
+        $films = $film_model->findFilmsByCountryId($country_id);
+
+        if (empty($films)) {
+            die("Không tìm thấy phim nào cho quốc gia này!");
+        }
+
+        $data["films"] = $films; // Trả về danh sách phim
+        $this->output->load("film/filmCountry", $data);
+    }
+
+
+
+
+
+
+
+    
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
             /**
         * Hiển thị trang thống kê các chức vụ
         */
@@ -284,3 +466,7 @@ class FilmController extends Base
         $this->output->load("film/chart", $data);
         }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a

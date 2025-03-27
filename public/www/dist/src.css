@@ -1,7 +1,10 @@
 body {
   font-size: 1.15rem;
+<<<<<<< HEAD
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
+=======
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 }
 a:hover{
   text-decoration: none !important;
@@ -13,7 +16,10 @@ a:hover{
   object-fit: cover;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 select {
   display: block;
 }
@@ -37,6 +43,7 @@ select {
   top: 50%;
   left: 50%;
 }
+<<<<<<< HEAD
 .login-wrap {
   position: relative;
   background: #fff;
@@ -59,6 +66,8 @@ select {
     .login-wrap .icon span {
       color: #fff;
     }
+=======
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 @media screen and (min-width:768px) {
   #videoPlayer{
@@ -66,14 +75,22 @@ select {
   }
 }
 .wrapper-auth {
+<<<<<<< HEAD
   max-width: 600px;
   width: 100%;
+=======
+  max-width: 400px;
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
   margin: 50px auto; /* Căn giữa form theo chiều ngang và tạo khoảng cách từ trên xuống */
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+<<<<<<< HEAD
+=======
+  text-align: center; /* Căn giữa chữ "Đăng nhập/Đăng ký" theo chiều ngang */
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 }
 .wrapper-auth>form {
   display: block;

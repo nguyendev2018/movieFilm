@@ -7,6 +7,7 @@ class UserController extends Base
 {
     public function login()
     {
+<<<<<<< HEAD
 /**
  * Thêm tệp JavaScript ".js" vào.
  */
@@ -59,10 +60,38 @@ class UserController extends Base
                 // Có lỗi không mong muốn xảy ra
                     $this->console->addDebugInfo("Error during reset password: " . $e->getMessage());
                     $_SESSION['error'] = "Có lỗi không mong muốn xảy ra, vui lòng thử lại sau!";
+=======
+        $userModel = new UserModel();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $loginMode = $_POST['loginMode'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+            if ($loginMode === 'true') {
+                $user = $userModel->getUser($email, $password);
+                if ($user) {
+                    session_regenerate_id(true);
+                    $_SESSION['logged'] = true;
+                    $_SESSION['user'] = $user[0];
+                    header('Location: /home');
+                    exit;
+                } else {
+                    $_SESSION['error_message'] = "Sai email hoặc mật khẩu!";
+                    $this->output->load('user/loginOrRegister');
+                }
+            } else {
+                $username = $_POST['username'];
+                $registerSuccess = $userModel->register($username, $email, $password);
+                if ($registerSuccess) {
+                    $_SESSION['message'] = "Đăng ký thành công.";
+                } else {
+                    $_SESSION['error'] = "Email đã được sử dụng!";
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
                 }
                 header('Location: /');
                 exit;
             }
+<<<<<<< HEAD
         } else {
             // Load login view
             $this->output->load('user/loginOrRegister');
@@ -75,5 +104,16 @@ class UserController extends Base
     {
         unset($_SESSION['logged']);
         return header('Location: /');
+=======
+        }
+        $this->output->load('user/loginOrRegister');
+    }
+
+    public function logout()
+    {
+        unset($_SESSION['logged'], $_SESSION['user']);
+        header('Location: /');
+        exit;
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
     }
 }

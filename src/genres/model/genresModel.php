@@ -24,7 +24,10 @@ class GenresModel extends Base
 //  return $this->database->query($query);
     $query = "SELECT * FROM `genres` LIMIT :limit OFFSET :offset";
     return $this->database->query($query, ['limit' => $limit, 'offset' => $offset]);
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 }
     public function countAllGenres(): int
     {

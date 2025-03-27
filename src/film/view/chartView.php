@@ -1,4 +1,8 @@
 <h2>THỐNG KÊ</h2>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 <label for="chartType">Chọn loại biểu đồ:</label>
 <select name="chartType" id="chartType" style="max-width: 200px;
 display: block;">

@@ -2,10 +2,17 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
+<<<<<<< HEAD
 -- Máy chủ: 127.0.0.1:3306
 -- Thời gian đã tạo: Th3 02, 2025 lúc 03:49 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
+=======
+-- Host: 127.0.0.1:3306
+-- Generation Time: Feb 11, 2025 at 04:35 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,12 +25,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+<<<<<<< HEAD
 -- Cơ sở dữ liệu: `phim_db`
+=======
+-- Database: `phim_db`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `banner`
 --
 
@@ -47,6 +59,9 @@ INSERT INTO `banner` (`banner_id`, `banner_name`, `banner_desc`, `image`) VALUES
 
 --
 -- Cấu trúc bảng cho bảng `category`
+=======
+-- Table structure for table `category`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `category` (
@@ -55,7 +70,11 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `category`
+=======
+-- Dumping data for table `category`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 INSERT INTO `category` (`category_id`, `category_name`) VALUES
@@ -67,16 +86,22 @@ INSERT INTO `category` (`category_id`, `category_name`) VALUES
 (11, 'Phim đề cử'),
 (12, 'Phim hành động'),
 (13, 'Phim đang chiếu'),
+<<<<<<< HEAD
 (14, 'Phim Old'),
 (17, 'Phim Hot'),
 (18, 'Phim New'),
 (19, 'Phim Bộ'),
 (20, 'phim Hài'),
 (21, 'Phim Truyền Hình');
+=======
+(14, 'phim b'),
+(16, 'phimmm');
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `comments`
 --
 
@@ -92,6 +117,9 @@ CREATE TABLE `comments` (
 
 --
 -- Cấu trúc bảng cho bảng `countries`
+=======
+-- Table structure for table `countries`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `countries` (
@@ -100,6 +128,7 @@ CREATE TABLE `countries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `countries`
 --
 
@@ -114,13 +143,26 @@ INSERT INTO `countries` (`country_id`, `country_name`) VALUES
 (7, 'Pháp'),
 (6, 'Thái Lan'),
 (12, 'Thụy Sĩ'),
+=======
+-- Dumping data for table `countries`
+--
+
+INSERT INTO `countries` (`country_id`, `country_name`) VALUES
+(4, 'Hàn Quốc'),
+(2, 'Mỹ'),
+(3, 'Nhật Bản'),
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 (5, 'Trung Quốc'),
 (1, 'Việt Nam');
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `episodes`
+=======
+-- Table structure for table `episodes`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `episodes` (
@@ -133,6 +175,7 @@ CREATE TABLE `episodes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `episodes`
 --
 
@@ -165,11 +208,23 @@ INSERT INTO `episodes` (`episode_id`, `film_id`, `episode_number`, `episode_name
 (33, 67, 2, 'Tập 2', 'https://www.youtube.com/embed/1NvSkYlmDkg?si=MAZg70zMeUEbigCF', '2025-03-02 01:24:45'),
 (34, 77, 1, 'Tập 1', 'https://www.youtube.com/embed/FK6S6Ve_ciQ?si=iTzySgdSFzkOpC_v', '2025-03-02 02:41:31'),
 (35, 77, 2, 'Tập 2', 'https://www.youtube.com/embed/FK6S6Ve_ciQ?si=iTzySgdSFzkOpC_v', '2025-03-02 02:41:59');
+=======
+-- Dumping data for table `episodes`
+--
+
+INSERT INTO `episodes` (`episode_id`, `film_id`, `episode_number`, `episode_name`, `video_url`, `created_at`) VALUES
+(1, 1, 1, 'Tập 1: Luffy xuất hiện', 'https://example.com/onepiece-ep1.mp4', '2024-11-23 13:09:01'),
+(2, 1, 2, 'Tập 2: Zoro tham gia', 'https://example.com/onepiece-ep2.mp4', '2024-11-23 13:09:01');
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `favorites`
+=======
+-- Table structure for table `favorites`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `favorites` (
@@ -180,16 +235,28 @@ CREATE TABLE `favorites` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `favorites`
 --
 
 INSERT INTO `favorites` (`favorite_id`, `user_id`, `film_id`, `added_at`) VALUES
+=======
+-- Dumping data for table `favorites`
+--
+
+INSERT INTO `favorites` (`favorite_id`, `user_id`, `film_id`, `added_at`) VALUES
+(1, 2, 1, '2024-11-23 13:15:39'),
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 (2, 2, 2, '2024-11-23 13:15:39');
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `films`
+=======
+-- Table structure for table `films`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `films` (
@@ -201,6 +268,7 @@ CREATE TABLE `films` (
   `language` enum('VN','EN') DEFAULT 'VN',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `country_id` int(11) DEFAULT NULL,
+<<<<<<< HEAD
   `category_id` int(11) DEFAULT NULL,
   `genre_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -229,11 +297,67 @@ INSERT INTO `films` (`film_id`, `film_name`, `description`, `image`, `release_ye
 (75, 'Cuộc Chiến Học Bổng', 'Rose là một học sinh nhận học bổng xuất sắc tại trường Sudruethai, một ngôi trường có nhiều mối quan hệ có thể giúp cô đạt được thứ hạng tốt trong tương lai. Tuy nhiên, khi bước vào ngôi trường này, Rose nhận ra rằng để có được cuộc sống tốt đẹp ở đất nước này, tiền bạc là tất cả. Mọi thứ đều xoay quanh tiền bạc và các mối quan hệ của cha mẹ. Người sử dụng điều đó nhiều nhất là Lily, nữ hoàng của trường, có cha là một thành viên của Hiệp hội Phụ huynh. Rose, một học sinh nhận học bổng bị kéo vào chuỗi cuối cùng của ngôi trường này, đã phải đứng dậy, &amp;#039;cướp lại những gì mà học sinh xứng đáng có&amp;#039; cùng với Surf, một học sinh nhận học bổng yên lặng nhưng thông minh và Boo, một vận động viên Taekwondo điên cuồng.', '1740836291_cuoc-chien-hoc-bong.webp', 2024, 'EN', '2025-03-01 05:42:38', 6, 19, 10),
 (76, 'Yêu Em', 'Phim kể về mối quan hệ giữa Thẩm Tích Phàm, một quản lý khách sạn đam mê công việc, và Hà Tô Diệp, một bác sĩ Đông y điềm đạm. Vì chứng mất ngủ, cô tìm đến Đông y và tình cờ gặp anh. Ban đầu chỉ là bác sĩ và bệnh nhân, nhưng những lần chạm mặt bất ngờ dần kéo họ lại gần nhau. Khi tình cảm nảy nở, cả hai phải đối mặt với những do dự từ quá khứ và dần tìm thấy ý nghĩa thực sự của tình yêu và đam mê của mình.', '1740836385_yeu-em-16081.webp', 2015, 'EN', '2025-03-01 05:42:49', 5, 13, 3),
 (77, 'Sát Thủ Về Hưu', 'Danny Dolinski - một sát thủ già, đang loay hoay trong cuộc tình đơn phương với Anata, một người quản lý câu lạc bộ cá tính. Ông bất ngờ được Tổ chức gọi quay lại làm nhiệm vụ huấn luyện Wihlborg, một sát thủ trẻ tuổi, tài năng và có thái độ bất cần đời.', '1740883221_satthuvehuu.jpg', 2023, 'EN', '2025-03-02 02:40:21', 2, 12, 1);
+=======
+  `category_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `films`
+--
+
+INSERT INTO `films` (`film_id`, `film_name`, `description`, `image`, `release_year`, `language`, `created_at`, `country_id`, `category_id`) VALUES
+(1, 'One Piece', 'Câu chuyện về cuộc hành trình tìm kho báu của Luffy.', '1732610227_onepice.jpeg', 1999, 'VN', '2024-11-23 13:09:01', 3, 3),
+(2, 'Avengers: Endgame', 'Trận chiến cuối cùng chống lại Thanos.', '2.1.jpg', 2019, 'EN', '2024-11-23 13:09:01', 2, 2),
+(3, 'Breaking Bad', 'Hành trình của một giáo viên hóa học trở thành trùm ma túy.', '1.jpg', 2008, 'EN', '2024-11-23 13:09:01', 2, 3),
+(4, 'Thám Tử Lừng Danh Conan', 'Conan', '1732594388_conan27.jpg', 2024, 'VN', '2024-11-25 16:38:07', 3, 3),
+(5, '7 Năm Chưa Cưới Sẽ Chia Tay', '7 Năm Chưa Cưới Sẽ Chia Tay', '1732594400_7-nam-chua-cuoi.jpg', 2023, 'VN', '2024-11-26 04:10:53', 1, NULL),
+(6, 'Đại Mộng Quy Ly', 'Cổ Trang', '1732595050_dai-mong-quy-ly.jpg', 2023, 'EN', '2024-11-26 04:19:03', 5, NULL),
+(7, 'Tham Vọng Giàu Sang', 'tham vọng giàu sang', '1732610474_1732597152_tham-vong-giau-sang.jpeg', 2024, 'EN', '2024-11-26 04:53:15', 1, NULL),
+(45, 'Hạnh phúc bị đánh cắp', 'Hạnh Phúc Bị Đánh Cắp - một bộ phim đầy kịch tính với câu chuyện xoay quanh cuộc sống của hai người phụ nữ trong gia tộc họ Đỗ, nơi nghề thêu tay truyền thống được truyền đời sau đời. Thúy Hạnh, con dâu trưởng hiền lành và thông minh, bị vướng vào những âm mưu hãm hại từ Ánh Dương, con dâu thứ tài năng nhưng đầy mưu mô và tham vọng. Với sự chỉ đạo của đạo diễn Nhâm Minh Hiền và sự góp mặt của các diễn viên tài năng như Lan Hương, Hồng Ánh và Ngọc Lan, bộ phim hứa hẹn mang lại cho khán giả những cung bậc cảm xúc không thể quên.', '1732609230_1732596706_1732595258_hanh-phuc-bi-danh-cap.jpg', 2024, 'VN', '2024-11-26 08:20:30', 1, NULL),
+(46, 'Mai', 'Mai - một phụ nữ tưởng như đã không còn thiết tha yêu đương và mưu cầu hạnh phúc cho riêng mình, lại bỗng khao khát được sống khác đi khi Dương tiến vào cuộc đời cô. Họ cho nhau những khoảnh khắc tự do, say đắm và tràn đầy tiếng cười. Nhưng liệu cả hai có giữ chặt niềm hạnh phúc đó khi miệng đời lắm cay nghiệt, bất công?', '1732609430_Mai.jpg', 2023, 'VN', '2024-11-26 08:23:50', 1, 2),
+(53, 'Phim 3', 'cccccccccccccccc', '1736773980_anime3.jpg', 2022, 'VN', '2025-01-13 13:13:00', 5, 1),
+(54, 'Phim 4', 'wwwwwwwwwwww', '1736943161_anime4.jpg', 2022, 'VN', '2025-01-15 12:12:41', 3, NULL),
+(55, 'phim 5', 'eeeeeeeeeeee', '1736943497_onepice.jpeg', 2011, 'EN', '2025-01-15 12:18:17', 4, NULL),
+(56, 'phim 7', 'rrrrrrrrrrrrr', '1736943549_conan27.jpg', 2024, 'VN', '2025-01-15 12:19:09', 4, NULL),
+(57, 'aaaaaaaaaaaa', 'aaaaaaaaaa', '1736943721_anime1.jpg', 2022, 'VN', '2025-01-15 12:22:01', 4, NULL),
+(58, 'aaaaaaaaaaaaaa', 'wwwwwwwwwwww', '1736943743_anime3.jpg', 2022, 'EN', '2025-01-15 12:22:23', 4, NULL),
+(59, 'mmmmmmmmmmm', 'bbbbbbbbbb', '1736943776_onepice.jpeg', 2023, 'VN', '2025-01-15 12:22:56', 2, NULL),
+(60, 'bbbbbbbbbb', 'aaaaaaaaaaa', '1736943820_onepice.jpeg', 2026, 'VN', '2025-01-15 12:23:40', 3, NULL),
+(61, 'kkkkkkkkkkk', 'aaaaaaaaaa', '1736943844_anime2.jpg', 2018, 'EN', '2025-01-15 12:24:04', 1, NULL),
+(62, 'Tết', 'aaaaaaaaaaaaa', '1736953570_7-nam-chua-cuoi.jpg', 2023, 'VN', '2025-01-15 15:06:10', 1, 1),
+(63, 'yêu không kiểm soát', 'vvvvvvvvv', '1736954772_yeu-khong-kiem-xot.jpg', 2022, 'EN', '2025-01-15 15:26:12', 5, 1),
+(64, 'nnnnnnnnnn', 'jjjjjjjjjjj', '1737381470_Reset.png', 2024, 'VN', '2025-01-20 13:57:50', 4, 1);
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `genres`
+=======
+-- Table structure for table `film_genres`
+--
+
+CREATE TABLE `film_genres` (
+  `film_id` int(11) NOT NULL,
+  `genre_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `film_genres`
+--
+
+INSERT INTO `film_genres` (`film_id`, `genre_id`) VALUES
+(1, 2),
+(1, 5),
+(2, 1),
+(3, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `genres`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `genres` (
@@ -242,6 +366,7 @@ CREATE TABLE `genres` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `genres`
 --
 
@@ -256,18 +381,35 @@ INSERT INTO `genres` (`genre_id`, `genre_name`) VALUES
 (1, 'Hành Động'),
 (15, 'Hoạt hình'),
 (12, 'Khoa Học'),
+=======
+-- Dumping data for table `genres`
+--
+
+INSERT INTO `genres` (`genre_id`, `genre_name`) VALUES
+(7, 'Cổ Trang'),
+(1, 'Hành Động'),
+(5, 'Hoạt Hình'),
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 (4, 'Kinh Dị'),
 (2, 'Phiêu Lưu'),
 (6, 'Tâm Lý'),
 (8, 'Thần thoại'),
+<<<<<<< HEAD
 (3, 'Tình Cảm'),
 (13, 'Viễn Tưởng'),
 (11, 'Võ Thuật');
+=======
+(3, 'Tình Cảm');
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `ratings`
+=======
+-- Table structure for table `ratings`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `ratings` (
@@ -280,27 +422,45 @@ CREATE TABLE `ratings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `ratings`
 --
 
 INSERT INTO `ratings` (`rating_id`, `user_id`, `film_id`, `rating`, `review`, `created_at`) VALUES
+=======
+-- Dumping data for table `ratings`
+--
+
+INSERT INTO `ratings` (`rating_id`, `user_id`, `film_id`, `rating`, `review`, `created_at`) VALUES
+(1, 2, 1, 5, 'Một bộ phim tuyệt vời với cốt truyện hấp dẫn!', '2024-11-23 13:15:39'),
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 (2, 2, 2, 4, 'Hiệu ứng hình ảnh đỉnh cao, nhưng hơi dài.', '2024-11-23 13:15:39');
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `users`
+=======
+-- Table structure for table `users`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
+<<<<<<< HEAD
   `username` varchar(255) NOT NULL,
+=======
+  `user_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
   `password` varchar(255) NOT NULL,
   `role` enum('user','admin') DEFAULT 'user',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
@@ -323,11 +483,24 @@ INSERT INTO `users` (`user_id`, `username`, `password`, `role`, `created_at`) VA
 (17, 'thaonguyen', 'a01610228fe998f515a72dd730294d87', 'user', '2025-02-24 14:53:24'),
 (18, 'nguyendev', 'a01610228fe998f515a72dd730294d87', 'admin', '2025-02-24 15:22:39'),
 (21, 'thảo nguyên', '$2y$10$sJovbqlbM0QUvHDOVknpseOE8MYIzGu040ybf0gtikcHBFrpj.1Nu', 'user', '2025-02-24 15:30:29');
+=======
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `email`, `password`, `role`, `created_at`) VALUES
+(1, 'Admin', 'admin@example.com', '0192023a7bbd73250516f069df18b500', 'admin', '2024-11-23 13:09:01'),
+(2, 'User1', 'user1@example.com', '482c811da5d5b4bc6d497ffa98491e38', 'user', '2024-11-23 13:09:01'),
+(3, 'MT', 'mt@gmail.com', '934b535800b1cba8f96a5d72f72f1611', 'user', '2025-02-10 12:28:36');
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Cấu trúc bảng cho bảng `watch_history`
+=======
+-- Table structure for table `watch_history`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 
 CREATE TABLE `watch_history` (
@@ -339,6 +512,7 @@ CREATE TABLE `watch_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+<<<<<<< HEAD
 -- Đang đổ dữ liệu cho bảng `watch_history`
 --
 
@@ -357,12 +531,28 @@ ALTER TABLE `banner`
 
 --
 -- Chỉ mục cho bảng `category`
+=======
+-- Dumping data for table `watch_history`
+--
+
+INSERT INTO `watch_history` (`history_id`, `user_id`, `film_id`, `episode_id`, `watched_at`) VALUES
+(1, 2, 1, 1, '2024-11-23 13:09:01'),
+(2, 2, 2, NULL, '2024-11-23 13:09:01');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `category`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`category_id`),
   ADD UNIQUE KEY `category` (`category_id`) USING BTREE;
 
 --
+<<<<<<< HEAD
 -- Chỉ mục cho bảng `comments`
 --
 ALTER TABLE `comments`
@@ -372,20 +562,31 @@ ALTER TABLE `comments`
 
 --
 -- Chỉ mục cho bảng `countries`
+=======
+-- Indexes for table `countries`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `countries`
   ADD PRIMARY KEY (`country_id`),
   ADD UNIQUE KEY `country_name` (`country_name`);
 
 --
+<<<<<<< HEAD
 -- Chỉ mục cho bảng `episodes`
+=======
+-- Indexes for table `episodes`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `episodes`
   ADD PRIMARY KEY (`episode_id`),
   ADD KEY `film_id` (`film_id`);
 
 --
+<<<<<<< HEAD
 -- Chỉ mục cho bảng `favorites`
+=======
+-- Indexes for table `favorites`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `favorites`
   ADD PRIMARY KEY (`favorite_id`),
@@ -393,23 +594,45 @@ ALTER TABLE `favorites`
   ADD KEY `film_id` (`film_id`);
 
 --
+<<<<<<< HEAD
 -- Chỉ mục cho bảng `films`
+=======
+-- Indexes for table `films`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `films`
   ADD PRIMARY KEY (`film_id`),
   ADD KEY `country_id` (`country_id`),
+<<<<<<< HEAD
   ADD KEY `category_id` (`category_id`),
   ADD KEY `fk_genre_id` (`genre_id`);
 
 --
 -- Chỉ mục cho bảng `genres`
+=======
+  ADD KEY `category_id` (`category_id`);
+
+--
+-- Indexes for table `film_genres`
+--
+ALTER TABLE `film_genres`
+  ADD PRIMARY KEY (`film_id`,`genre_id`),
+  ADD KEY `genre_id` (`genre_id`);
+
+--
+-- Indexes for table `genres`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `genres`
   ADD PRIMARY KEY (`genre_id`),
   ADD UNIQUE KEY `genre_name` (`genre_name`);
 
 --
+<<<<<<< HEAD
 -- Chỉ mục cho bảng `ratings`
+=======
+-- Indexes for table `ratings`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `ratings`
   ADD PRIMARY KEY (`rating_id`),
@@ -417,6 +640,7 @@ ALTER TABLE `ratings`
   ADD KEY `film_id` (`film_id`);
 
 --
+<<<<<<< HEAD
 -- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
@@ -425,6 +649,16 @@ ALTER TABLE `users`
 
 --
 -- Chỉ mục cho bảng `watch_history`
+=======
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `watch_history`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `watch_history`
   ADD PRIMARY KEY (`history_id`),
@@ -433,6 +667,7 @@ ALTER TABLE `watch_history`
   ADD KEY `episode_id` (`episode_id`);
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -468,11 +703,37 @@ ALTER TABLE `episodes`
 
 --
 -- AUTO_INCREMENT cho bảng `favorites`
+=======
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `countries`
+--
+ALTER TABLE `countries`
+  MODIFY `country_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `episodes`
+--
+ALTER TABLE `episodes`
+  MODIFY `episode_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `favorites`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `favorites`
   MODIFY `favorite_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT cho bảng `films`
 --
 ALTER TABLE `films`
@@ -486,11 +747,27 @@ ALTER TABLE `genres`
 
 --
 -- AUTO_INCREMENT cho bảng `ratings`
+=======
+-- AUTO_INCREMENT for table `films`
+--
+ALTER TABLE `films`
+  MODIFY `film_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+
+--
+-- AUTO_INCREMENT for table `genres`
+--
+ALTER TABLE `genres`
+  MODIFY `genre_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `ratings`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `ratings`
   MODIFY `rating_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
@@ -498,11 +775,21 @@ ALTER TABLE `users`
 
 --
 -- AUTO_INCREMENT cho bảng `watch_history`
+=======
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `watch_history`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `watch_history`
   MODIFY `history_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+<<<<<<< HEAD
 -- Các ràng buộc cho các bảng đã đổ
 --
 
@@ -515,18 +802,30 @@ ALTER TABLE `comments`
 
 --
 -- Các ràng buộc cho bảng `episodes`
+=======
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `episodes`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `episodes`
   ADD CONSTRAINT `episodes_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`film_id`) ON DELETE CASCADE;
 
 --
+<<<<<<< HEAD
 -- Các ràng buộc cho bảng `favorites`
+=======
+-- Constraints for table `favorites`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `favorites`
   ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`film_id`) REFERENCES `films` (`film_id`) ON DELETE CASCADE;
 
 --
+<<<<<<< HEAD
 -- Các ràng buộc cho bảng `films`
 --
 ALTER TABLE `films`
@@ -536,13 +835,34 @@ ALTER TABLE `films`
 
 --
 -- Các ràng buộc cho bảng `ratings`
+=======
+-- Constraints for table `films`
+--
+ALTER TABLE `films`
+  ADD CONSTRAINT `films_ibfk_1` FOREIGN KEY (`country_id`) REFERENCES `countries` (`country_id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `films_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`) ON DELETE SET NULL;
+
+--
+-- Constraints for table `film_genres`
+--
+ALTER TABLE `film_genres`
+  ADD CONSTRAINT `film_genres_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`film_id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `film_genres_ibfk_2` FOREIGN KEY (`genre_id`) REFERENCES `genres` (`genre_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `ratings`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `ratings`
   ADD CONSTRAINT `ratings_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
   ADD CONSTRAINT `ratings_ibfk_2` FOREIGN KEY (`film_id`) REFERENCES `films` (`film_id`) ON DELETE CASCADE;
 
 --
+<<<<<<< HEAD
 -- Các ràng buộc cho bảng `watch_history`
+=======
+-- Constraints for table `watch_history`
+>>>>>>> 5789be564b16441a3c1ddba2bd92f78fcc90867a
 --
 ALTER TABLE `watch_history`
   ADD CONSTRAINT `watch_history_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
