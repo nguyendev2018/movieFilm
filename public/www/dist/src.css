@@ -1,6 +1,98 @@
-body{font-size: 1.15rem;}
-.img-poster{
+body {
+  font-size: 1.15rem;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+}
+a:hover{
+  text-decoration: none !important;
+  color: #0056b3;
+}
+.img-poster {
   width: 100px;
   height: 150px;
   object-fit: cover;
 }
+
+
+select {
+  display: block;
+}
+.card-img, .card-img-bottom, .card-img-top{
+  height: 250px;
+  object-fit: cover;
+}
+
+.wrapper {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal.show .modal-dialog{
+  max-width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  transform: translate(-50%, -50%) !important;
+  top: 50%;
+  left: 50%;
+}
+.login-wrap {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+  .login-wrap h3 {
+    font-weight: 300;
+  }
+  .login-wrap .icon {
+    width: 80px;
+    height: 80px;
+    background: #1089ff;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+    .login-wrap .icon span {
+      color: #fff;
+    }
+
+@media screen and (min-width:768px) {
+  #videoPlayer{
+    height: 600px;
+  }
+}
+.wrapper-auth {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto; /* Căn giữa form theo chiều ngang và tạo khoảng cách từ trên xuống */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.wrapper-auth>form {
+  display: block;
+}
+
+.wrapper-auth button {
+  width: 100%;
+  margin-top: 20px; /* Tăng khoảng cách phía trên nút */
+
+  padding: 10px;
+  background-color:  #b58ffb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper-auth a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+

@@ -14,8 +14,8 @@ return [
         "session.use_cookies" => "On",
         "session.use_trans_sid" => "Off",
         "session.cookie_httponly" => "On",
-        "session.cookie_lifetime" => 90,
-        "session.gc_maxlifetime" => 90,
+        "session.cookie_lifetime" => 86400,
+        "session.gc_maxlifetime" => 86400,
         "session.gc_probability" => 1,
         "session.gc_divisor" => 100,
 
@@ -36,8 +36,8 @@ return [
         "session.use_cookies" => "On",
         "session.use_trans_sid" => "Off",
         "session.cookie_httponly" => "On",
-        "session.cookie_lifetime" => 90,
-        "session.gc_maxlifetime" => 90,
+        "session.cookie_lifetime" => 24800,
+        "session.gc_maxlifetime" => 24800,
         "session.gc_probability" => 1,
         "session.gc_divisor" => 100,
 
